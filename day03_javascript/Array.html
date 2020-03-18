@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Array</title>
+        <script>
+            // 数组中长度和元素类型都是可变的
+            var arr1 = [1,"abc",true];
+            var arr2 = new Array(5);
+            document.write(arr1 + "<br>");
+            document.write(arr2 + "<br>");
+            document.write(arr2.length + "<br>");
+
+            arr1[5] = "d";
+            document.write(arr1 + "<br>");
+            document.write(arr1[4] + "<br>");//下标越界的时候会自动增加长度，不会报错
+
+            //join(参数):将数组中的元素按照指定的分隔符拼接为字符串
+            // push():向数组的末尾添加一个或更多元素，并返回新的长度。
+            document.write(arr1.push(11) + "<br>");
+            document.write(arr1.join("--") + "<br>");
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

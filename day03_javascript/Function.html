@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Function</title>
+        <script>
+
+            //1. 方法定义时形参类型不用写,返回值不用写
+            function fun1(a, b) {
+                alert(a + b);
+            }
+            var fun2 = function(a,b){
+                alert(a-b);
+            }
+            fun1(3, 4);
+            fun2(3, 4);
+
+            //2. 方法function是对象，其中有length属性表示形参的个数
+            alert(fun1.length);
+
+            //3. 方法是对象，如果定义了相同名的方法，会导致方法覆盖
+            fun1 = function(a,b){
+                alert(a);
+            }
+
+            //4. 方法的调用只与方法名有关，与形参个数无关
+            fun1(3, 4);
+            fun1(1);
+
+            //5. 方法声明中有一个内置队形，arguments,用于封装所有的实际参数
+            //例，求任意个数的和
+            function add() {
+                var sum = 0;
+                for (var i = 0; i < arguments.length; i++) {
+                    sum += arguments[i];
+                }
+                return sum;
+            }
+            alert(add(1,2,3));
+            alert(add(1,2,3,4));
+
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
