@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>DOM</title>
+    </head>
+    <body>
+        <img id="light" src="img/off.gif">
+        <h id="title">123</h>
+        <!--
+         javascript 标签会阻塞html对象，先于其执行。如果此处script标签放在head中将会弹出null
+               -->
+        <script>
+            // DOM对象用于控制HTML文档
+            // 其中DOM方法用于操作HTML元素
+            // DOM属性是能够操作的HTML元素的值
+            // 例如getElementById方法使用id查找元素。
+            // innerHTML属性可用于获取或改变任何HTML元素，包括 <html> 和 <body>。
+            var light = document.getElementById("light");
+            alert("我要换图片！");
+            light.src = "img/on.gif";
+
+            var title = document.getElementById("title");
+            alert("我要换内容了！");
+            title.innerHTML = "456";
+        </script>
+    </body>
+</html>
