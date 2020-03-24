@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Window对象</title>
+    </head>
+    <body>
+        <input id="open" type="button" value="打开百度">
+        <input id="close" type="button" value="关闭">
+        <script>
+            // Window对象不需要创建就可以使用，通过window.方法()或直接方法()的方式调用。
+
+            /*
+                与弹出框有关的方法
+                1. alert() 显示带有确定按钮的信息提示框
+                2.confirm() 显示带有确定和取消按钮的信息提示框
+                    用户选择确定返回true，选择取消放回false
+                3.prompt() 提示用户进行输入 返回用户输入的值,若用户选择取消则返回null
+             */
+            alert("欢迎！");
+            var password = prompt("请输入密码");
+            if(password) {
+                window.alert("密码：" + password + "正确！");
+            }else{
+                alert("退出！")
+            }
+            var flag = confirm("你确定要退出吗？");
+            if(flag){
+                alert("滚吧！");
+            }else {
+                alert("没事别瞎点！");
+            }
+
+            /*
+                与打开关闭有关的方法
+                1. close() 关闭浏览器窗口。
+                    * 谁调用我 ，我关谁
+                2. open()  打开一个新的浏览器窗口
+                    * 返回新的Window对象
+             */
+            var openBT = document.getElementById("open");
+            var newWindow;
+            openBT.onclick = function () {
+                newWindow = open("https://www.baidu.com/");
+            }
+            var closeBT = document.getElementById("close");
+            closeBT.onclick = function () {
+                newWindow.close();
+            }
+            /*
+                定时器相关方法
+                1. setTimeout(fun,times)    在指定的毫秒数后调用函数或计算表达式。
+                2. clearTimeout()  取消由 setTimeout() 方法设置的 timeout。
+                3. setInterval()   按照指定的周期（以毫秒计）来调用函数或计算表达式。
+                4. clearInterval() 取消由 setInterval() 设置的 timeout。
+             */
+            var t = setTimeout(boom,2000);
+            function boom() {
+                alert("boom!");
+            }
+            clearTimeout(t);    //取消定时器
+        </script>
+    </body>
+</html>
