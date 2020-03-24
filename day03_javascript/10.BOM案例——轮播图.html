@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>轮播图</title>
+    </head>
+    <body>
+        <img id="picture" src="img/banner_1.jpg" width="1500" alt="">
+
+        <script>
+            var pic = document.getElementById("picture");
+            var i = 2;
+            setInterval(fun,2000);
+            function fun() {
+                pic.setAttribute("src","img/banner_" + i + ".jpg");
+                i++;
+                if(i===4) i=1;
+            }
+        </script>
+    </body>
+</html>
