@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<users>
+    <user id='1'>
+        <name>zhangsan</name>
+        <age>23</age>
+        <gender>male</gender>
+        <br/>
+    </user>
+
+    <user id='2'>
+        <name>lisi</name>
+        <age>24</age>
+        <gender>female</gender>
+    </user>
+    <![CDATA[这里的文字将被原样展示！]]>
+</users>
